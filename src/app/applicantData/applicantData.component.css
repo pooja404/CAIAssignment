@@ -1,0 +1,29 @@
+
+input[type="text"] {
+
+    background-color : #EEF4F5; 
+  
+  }
+  ::placeholder{
+      color:#0CE4F3;
+  }
+  table .jsontable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .jsontable td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .jsontable tr:nth-child(even) {
+    background-color: #dddddd;
+    margin-bottom: 20px;
+  }
+  
+  .row1 div{
+      margin-bottom: 10px;
+  }

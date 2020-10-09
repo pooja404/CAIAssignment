@@ -1,0 +1,136 @@
+
+   <div class="col-md-12" [formGroup]="addForm">
+    <div class="form-group">
+      <div style="float: right;">
+        <button style="background-color: #000080; color: white;"  > Clone the application</button>
+       </div>
+      <h3>Applicant Information and Health Data</h3>
+     
+      <div class="row row1">
+        <div class="col-md-3">
+          <input type="text" placeholder="first name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="middle name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="last name">
+        </div>
+        
+        <div class="col-md-3">
+          <input type="text" placeholder="email">
+        </div>
+        
+        <div class="col-md-3">
+          <input type="text" placeholder="phone number">
+        </div>
+        
+        <div class="col-md-3">
+          <input type="text" placeholder="country">
+        </div>
+        
+        <div class="col-md-3">
+          <input type="text" placeholder="state">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="city">
+        </div>
+      </div>
+    </div>
+ </div>  
+   <div class="col-md-12" [formGroup]="addForm">
+      <div class="form-group">
+        <h3>Medicare</h3>
+        <div class="row row1">
+          <div class="col-md-3">
+            <input type="text" placeholder="first name">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="middle name">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="last name">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="email">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="Phone number">
+          </div>
+          <div class="col-md-3">
+            <input type="text"placeholder="country">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="state">
+          </div>
+          <div class="col-md-3">
+            <input type="text" placeholder="city">
+          </div>
+        </div>
+      </div>
+   </div>  
+
+    <div class="col-md-12" [formGroup]="addForm">
+      <div class="form-group">
+      <h3>Other Data</h3>
+      <div class="row row1">
+        <div class="col-md-3">
+          <input type="text" placeholder="first name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="middle name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="last name">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="email">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="Phone number">
+        </div>
+        <div class="col-md-3">
+          <input type="text"placeholder="country">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="state">
+        </div>
+        <div class="col-md-3">
+          <input type="text" placeholder="city">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-12" [formGroup]="addForm">
+      <div class="form-group">
+     <h3>Add Record</h3>
+        <div style="float: right;">
+        <button style="background-color: #000080; color: white;" (click)="onAddRow()" > + Add </button>
+       </div>
+		<table>
+		
+			<tbody>
+				<tr class="col-md-12" *ngFor="let row of addForm.get('rows')?.controls;let index = index;">
+          <td class="col-md-4">
+            <input [formControl]="row.get('firstname')"  type="text" placeholder="firstname" />  
+          </td>
+          <td class="col-md-4">
+            <input [formControl]="row.get('mname')"   type="text" placeholder="middle name" /> 
+          </td>
+          <td class="col-md-4">
+            <input [formControl]="row.get('lname')"  type="text"  placeholder="Last Name" /> 
+          </td>
+          <td class="col-md-4">
+            <input [formControl]="row.get('email')"  type="text"  placeholder="Email" /> 
+          </td>
+         
+        </tr>
+        <br/>
+       
+        
+			</tbody>
+    </table>
+    </div>
+
+    </div>
+    
